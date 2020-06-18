@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 브라우저 제어해보기</title>
+</head>
+<body class="body">
+    <script>
+       
+        var Links = {
+            setColor:function(color){
+                var alist = document.querySelectorAll('a');
+                for(i = 0; i < alist.length; i++){
+                alist[i].style.color= color;
+                }
+            }
+        }
+
+        var body = {
+            setColor:function(color){
+                document.querySelector('body').style.color = color;
+            }, //객체의 프로퍼티 끼리 구분할때는 콤마를 찍어야함
+
+            setBackgroundColor:function(color){
+                document.querySelector('body').style.backgroundColor= color;
+            }
+        }
+
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+                if(self.value ==='night'){
+            body.setBackgroundColor('black');
+            body.setColor('white');
+            self.value ='day';
+            
+               Links.setColor('red');
+            } else {
+                body.setBackgroundColor('white');
+                body.setColor('black');
+                self.value ='night';
+
+                Links.setColor('gray');
+             }
+            }
+    </script>
+    <h1><a href="#">WEB</a></h1>
+
+    <input id="night_day" type="button" value="night"onclick="nightDayHandler(this)">
+        
+    <ol>
+        <li><a href="#"> HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+    </ol>
+    <h2>JavaScript</h2>
+    <p>loElit fugiat nisi ut et consequat deserunt nisi ea. Pariatur ipsum dolore magna ut Lorem. Aliquip et ex consectetur adipisicing excepteur. Non sint aliqua nisi aute est incididunt occaecat anim reprehenderit qui mollit nostrud non. Mollit eu reprehenderit ea est elit eu ullamco nulla sunt. Proident officia do voluptate sunt. Fugiat commodo dolor fugiat excepteur exercitation aliqua ullamco cillum duis commodo.
+
+Ex aute mollit amet elit occaecat proident magna Lorem dolore ut cupidatat ex exercitation. Occaecat voluptate labore sit exercitation aliqua non et irure nostrud commodo. Lorem irure occaecat id dolore occaecat veniam est Lorem quis duis id Lorem. Labore deserunt laborum irure nisi incididunt eiusmod sunt sit aute. Proident dolore qui et duis ullamco aliquip. Qui nostrud dolore pariatur ad amet aliqua nostrud.
+
+Dolor minim occaecat sunt ullamco qui duis reprehenderit reprehenderit. Do dolor deserunt veniam aliqua deserunt consectetur voluptate esse mollit nisi elit in. Ad laboris magna aliqua labore et veniam ad aute fugiat Lorem. Non mollit laborum anim elit. Dolor commodo sunt sunt cupidatat pariatur ea incididunt ad consequat. Nostrud eu culpa est minim.
+
+Aliqua et aliquip ea esse aute. Elit sunt ad dolore elit. Laborum nisi do duis aliqua qui. Voluptate esse pariatur veniam incididunt sit id et ut nisi. Consequat excepteur cupidatat officia dolore duis cillum aliqua. Voluptate commodo aliqua non proident magna mollit.
+
+Cillum amet do laboris laborum dolore. Incididunt adipisicing sit sint dolore consequat Lorem reprehenderit consequat amet do. Proident aute ut nulla incididunt adipisicing exercitation occaecat voluptate aliqua eiusmod Lorem irure deserunt cupidatat. Nulla dolore nostrud et ex ad tempor non. Et officia dolore id ad duis ipsum velit cupidatat irure cillum tempor elit fugiat qui.</p>
+<script>
+    var alist = document.querySelectorAll('a');
+
+    for(i = 0; i < alist.length; i++){
+        alist[i].style.color='powderbelue';
+    }
+</script>
+</body>
+</html>

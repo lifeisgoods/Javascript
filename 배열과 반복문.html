@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loop & Array</h1>
+    <h2>co workers</h2>
+    <script>
+        var coworkers = ['nakwon','hanna','sun','hoon','sang','nanana'];
+
+        var i = 0;
+        while(i < coworkers.length){
+            document.write('<li>'+coworkers[i]+'</li>');
+            i += 1;
+        }
+    </script>
+    <h2>for로 구현</h2>
+    <script>
+        for(i = 0; i < coworkers.length; i++){
+            document.write('<li>'+coworkers[i]+'</li>');
+        }
+</script>
+</body>
+</html>
